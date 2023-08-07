@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <link rel="stylesheet" href="./style/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./assets/fonts/font.css" />
+
+    <style>
+      input[type='number']:focus, button#submit:active {
+        border-color: slateblue !important;
+        outline-color: slateblue !important;
+        box-shadow: none;
+      }
+      section {
+        border-radius: 30px;
+        border-bottom-right-radius: 200px;
+      }
+      h2 {
+        /* font-size: 62px !important; */
+        font-size: 6vw !important;
+      }
+      @media screen and (max-width: 701px){
+        #submit{
+          padding: 10px !important;
+        }
+        section {
+          border-bottom-right-radius: 100px !important;
+        }
+        h2 {
+          font-size: 10vw !important;
+        }
+        main {
+          padding: 100px 0;
+        }
+        section {
+          padding: 20px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <main class="shadow justify-content-center align-items-center row 
+      p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-2
+      ">
+        <section class="shadow flex-column justify-content-center col-7 ">
+          <div class="p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-2">
+            <div class="row">
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-4">
+                <label for="year-input" class="form-label text-secondary PopBold">YEAR</label>
+                <input type="number" class="form-control form-control-lg PopBold" id="year-input" />
+                <p class="invalid-feedback PopRegular" id="y-feedback"></p>
+              </div>
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-4">
+                <label for="month-input" class="form-label text-secondary PopBold">MONTH</label>
+                <input type="number" class="form-control form-control-lg PopBold" id="month-input" />
+                <p class="invalid-feedback PopRegular" id="m-feedback"></p>
+              </div>
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-4">
+                <label for="day-input" class="form-label text-secondary PopBold">DAY</label>
+                <input type="number" class="form-control form-control-lg PopBold" id="day-input" />
+                <p class="invalid-feedback PopRegular" id="d-feedback"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-xxl-10 col-xl-10 col-lg-10">
+                <hr class="" />
+              </div>
+              <div class="col-12 col-xxl-2 col-xl-2 col-lg-2 d-flex justify-content-center">
+                <button id="submit" style="background-color: black; border-color: black;" class="rounded-circle p-3 btn btn-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+                    <g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" /></g>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="row PopExtraBold">
+              <h2><span id="year-result" style="color:slateblue">- -</span> Years</h2>
+              <h2><span id="month-result" style="color:slateblue">- -</span> Month</h2>
+              <h2><span id="day-result" style="color:slateblue">- -</span> Day</h2>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script defer src="./style/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./logic/script.js"></script>
+  </body>
+</html>
